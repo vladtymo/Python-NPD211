@@ -20,13 +20,13 @@ print(calculate())
 calculate()
 calculate()
 
-# def multiply(n):
-#     def inner(m): return n * m
+# ------ closure - using outer parameters
+def multiply(n):
+    def inner(m): return n * m
  
-#     return inner
+    return inner
  
- 
-# fn = multiply(5)
-# print(fn(5))        # 25
-# print(fn(6))        # 30
-# print(fn(7))        # 35
+fn = multiply(5) # n
+print(fn(5))        # 25
+print(fn(6))        # 30
+print(fn(7))        # 35
